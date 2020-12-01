@@ -15,7 +15,7 @@ ping.get('/', (req, res) => {
           }
         `,
       }),
-    R.andThen(res.json)
+    R.andThen((result) => res.json(result))
   )()
 })
 
