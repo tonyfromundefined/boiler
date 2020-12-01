@@ -24,6 +24,7 @@ The Production-ready GraphQL boilerplate.
 
 ## Pre-configured
 
+- Yarn 2
 - TypeScript
 - Webpack
 - Babel
