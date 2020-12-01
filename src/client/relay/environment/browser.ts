@@ -8,6 +8,14 @@ const store = new Store(source)
 let environment: Environment | null = null
 
 export function getEnvironment(_source?: any) {
+  if (_source) {
+    R.pipe(
+      () => _source,
+      Object.entries,
+      R.map(([dataId, record]) => source.set(dataId, record))
+    )()
+  }
+
   if (environment) {
     return environment
   }
@@ -23,14 +31,6 @@ export function getEnvironment(_source?: any) {
       R.andThen(({ data }) => data)
     )()
   })
-
-  if (_source) {
-    R.pipe(
-      () => _source,
-      Object.entries,
-      R.map(([dataId, record]) => source.set(dataId, record))
-    )()
-  }
 
   return (environment = new Environment({
     network,
