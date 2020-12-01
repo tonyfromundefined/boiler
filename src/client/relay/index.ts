@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext, NextPage } from 'next/types'
+import { GetStaticPropsContext, NextPage } from 'next/types'
 import * as R from 'ramda'
 import { fetchQuery, GraphQLTaggedNode } from 'react-relay'
 
@@ -11,36 +11,19 @@ export function getRelayServerSideProps<T extends { variables: any }>({
   variables,
 }: {
   query: GraphQLTaggedNode
-  variables?: (ctx: GetServerSidePropsContext) => T['variables']
+  variables?: (ctx: GetStaticPropsContext) => T['variables']
 }) {
-  return (ctx: GetServerSidePropsContext) => {
-    const isFirstRequest = ctx.req.url?.indexOf('/_next') === -1
-
-    if (isFirstRequest) {
-      return R.pipe(
-        (ctx: GetServerSidePropsContext) => ({
-          ...getInitialEnvironment(),
-          ctx,
-        }),
-        ({ environment, source, ctx }) =>
-          fetchQuery(environment, query, variables?.(ctx) ?? {}).then(
-            () => source
-          ),
-        R.andThen((source) => source.toJSON()),
-        R.andThen((relaySource) => ({
-          props: {
-            relaySource,
-          },
-        }))
-      )(ctx)
-    } else {
-      return Promise.resolve({
-        props: {
-          relaySource: null,
-        },
-      })
-    }
-  }
+  return R.pipe(
+    (ctx: GetStaticPropsContext) => ({ ...getInitialEnvironment(), ctx }),
+    ({ environment, source, ctx }) =>
+      fetchQuery(environment, query, variables?.(ctx) ?? {}).then(() => source),
+    R.andThen((source) => source.toJSON()),
+    R.andThen((relaySource) => ({
+      props: {
+        relaySource,
+      },
+    }))
+  )
 }
 
 export { getEnvironment } from './environment'
