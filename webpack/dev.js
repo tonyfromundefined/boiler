@@ -1,9 +1,12 @@
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const GitRevisionPlugin = require('git-revision-webpack-plugin')
 const NodemonPlugin = require('nodemon-webpack-plugin')
 const path = require('path')
 const pnpNodeExternals = require('pnp-node-externals')
 const PnpWebpackPlugin = require('pnp-webpack-plugin')
 const { EnvironmentPlugin } = require('webpack')
+
+const git = new GitRevisionPlugin()
 
 module.exports = {
   mode: 'development',
@@ -65,6 +68,9 @@ module.exports = {
   },
   watch: true,
   plugins: [
+    new EnvironmentPlugin({
+      COMMITHASH: git.commithash(),
+    }),
     new ForkTsCheckerWebpackPlugin(),
     new NodemonPlugin({
       script: './build/index.js',

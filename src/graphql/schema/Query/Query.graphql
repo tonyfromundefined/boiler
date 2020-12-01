@@ -1,6 +1,6 @@
 type Query {
   """
-  returns true
+  Returns commit hash
   """
-  ping: Boolean!
+  version: String!
 }

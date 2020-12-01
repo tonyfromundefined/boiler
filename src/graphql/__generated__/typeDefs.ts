@@ -40,8 +40,8 @@ type Query {
   """Get object by ID (Global Object Identification)"""
   node(id: ID!): Node
 
-  """returns true"""
-  ping: Boolean!
+  """Returns commit hash"""
+  version: String!
 }
 
 input ArticlesWhereInput {

@@ -1,9 +1,12 @@
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const GitRevisionPlugin = require('git-revision-webpack-plugin')
 const path = require('path')
 const pnpNodeExternals = require('pnp-node-externals')
 const PnpWebpackPlugin = require('pnp-webpack-plugin')
 const { EnvironmentPlugin } = require('webpack')
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin')
+
+const git = new GitRevisionPlugin()
 
 module.exports = {
   mode: 'production',
@@ -63,6 +66,9 @@ module.exports = {
     minimize: true,
   },
   plugins: [
+    new EnvironmentPlugin({
+      COMMITHASH: git.commithash(),
+    }),
     new ForkTsCheckerWebpackPlugin(),
     new SimpleProgressWebpackPlugin({
       format: 'compact',
