@@ -1,6 +1,6 @@
 import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
-import { DocumentArticle } from '../models/Article';
-import { MyContext } from '../graphql/context';
+import { DocumentArticle } from '../../models/Article';
+import { MyContext } from '../../graphql/context';
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };

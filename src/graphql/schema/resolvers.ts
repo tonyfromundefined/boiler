@@ -3,8 +3,8 @@ import {
   GraphQLDateTime as DateTime,
   GraphQLTime as Time,
 } from 'graphql-iso-date'
-import { Resolvers } from '~/types/codegen'
 
+import { Resolvers } from '../__generated__/codegen'
 import { Article, ArticleQueries } from './Article'
 import { Node, NodeQueries } from './Node'
 import { Query } from './Query/Query'

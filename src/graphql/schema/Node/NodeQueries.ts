@@ -1,6 +1,7 @@
 import R from 'ramda'
 import { Article, DocumentArticle } from '~/models'
-import { Resolvers } from '~/types/codegen'
+
+import { Resolvers } from '../../__generated__/codegen'
 
 export const NodeQueries: Resolvers['Query'] = {
   async node(parent, args, ctx) {

@@ -1,8 +1,9 @@
 import { Article } from '~/models'
-import { Resolvers } from '~/types/codegen'
 
 import { compactMap } from '@boiler/f'
 import { connection } from '@boiler/graphql-connection-resolver'
+
+import { Resolvers } from '../../__generated__/codegen'
 
 export const ArticleQueries: Resolvers['Query'] = {
   articles: connection({

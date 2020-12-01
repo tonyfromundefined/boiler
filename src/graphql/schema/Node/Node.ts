@@ -1,5 +1,6 @@
 import { ApolloError } from 'apollo-server-express'
-import { Resolvers } from '~/types/codegen'
+
+import { Resolvers } from '../../__generated__/codegen'
 
 export const Node: Resolvers['Node'] = {
   __resolveType(parent) {

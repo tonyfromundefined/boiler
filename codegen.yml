@@ -13,12 +13,12 @@ generates:
       - add:
           placement: 'append'
           content: '`'
-  src/types/codegen.ts:
+  src/graphql/__generated__/codegen.ts:
     plugins:
       - typescript
       - typescript-resolvers
     config:
-      contextType: ../graphql/context#MyContext
+      contextType: ../../graphql/context#MyContext
       mappers:
-        Article: ../models/Article#DocumentArticle
+        Article: ../../models/Article#DocumentArticle
       noNamespaces: true

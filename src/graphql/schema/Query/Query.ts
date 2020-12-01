@@ -1,4 +1,4 @@
-import { Resolvers } from '~/types/codegen'
+import { Resolvers } from '../../__generated__/codegen'
 
 export const Query: Resolvers['Query'] = {
   version() {
