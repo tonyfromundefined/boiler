@@ -37,7 +37,7 @@ The Production-ready GraphQL boilerplate.
 
 ## Pre-written
 
-- GraphQL Executor
+- GraphQL Operation Executor
 - GraphQL Connection Helper (`@boiler/graphql-connection-resolver`)
 
 ## Getting Started
