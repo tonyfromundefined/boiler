@@ -4,7 +4,6 @@
     "target": "esnext",
     "module": "commonjs",
     "lib": [],
-    "allowJs": true,
     "jsx": "preserve",
     "outDir": "./build",
     "rootDir": "./",

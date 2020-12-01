@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "build": "yarn clean && next build ./src/client && webpack-cli --config ./webpack/build.js",
-    "clean": "rimraf ./node_modules && rimraf ./tsconfig.tsbuildinfo",
+    "clean": "rimraf ./node_modules && rimraf ./build",
     "codegen": "graphql-codegen",
-    "dev": "yarn clean && webpack-cli --config ./webpack/dev.js --watch",
-    "dev:debug": "yarn clean && DEBUG=true webpack-cli --config ./webpack/dev.js --watch",
+    "dev": "yarn clean && webpack-cli --config ./webpack/dev.js",
+    "dev:debug": "yarn clean && DEBUG=true webpack-cli --config ./webpack/dev.js",
     "start": "NODE_ENV=production node ./lib/index.js",
     "test": "dotenv -e .env -- jest --maxWorkers=8"
   },

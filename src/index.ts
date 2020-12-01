@@ -14,23 +14,27 @@ import { parse } from 'url'
 
 import logger from '@boiler/logger'
 
-import conf from './client/next.config.js'
+import { STAGE } from './constants'
+import { createConnection } from './db'
+import restapi from './restapi'
 
 const PORT = 3000
 
 async function bootstrap() {
+  logger.info(`Stage "${STAGE}" is initializing...`)
+
   const app = express()
   const server = createServer(app)
 
   const client = next({
     dev: process.env.NODE_ENV !== 'production',
     dir: path.resolve('./src/client'),
-    conf,
+    conf: require('./client/next.config.js'),
   })
 
   const render = client.getRequestHandler()
 
-  await Promise.all([client.prepare()])
+  await Promise.all([createConnection()])
 
   app.get('/health', (req, res) => {
     res.send('ok')
@@ -39,6 +43,8 @@ async function bootstrap() {
   app.use(cors())
   app.use(bodyParser.json())
   app.use(cookieParser())
+
+  app.use('/api', restapi)
 
   // app.use('/_admin/agendash', Agendash(getAgenda()))
   app.use('/voyager', voyagerMiddleware({ endpointUrl: '/graphql' }))

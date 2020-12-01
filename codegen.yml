@@ -1,0 +1,23 @@
+overwrite: true
+schema:
+  - ./src/graphql/schema/**/*.graphql
+generates:
+  src/graphql/__generated__/schema.graphql:
+    plugins:
+      - schema-ast
+  src/graphql/__generated__/typeDefs.ts:
+    plugins:
+      - add:
+          content: export default `
+      - schema-ast
+      - add:
+          placement: 'append'
+          content: '`'
+  src/types/codegen.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      contextType: ../graphql/context#MyContext
+      # mappers:
+      noNamespaces: true
