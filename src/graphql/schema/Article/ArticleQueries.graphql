@@ -3,12 +3,12 @@ extend type Query {
   Get articles
   """
   articles(
-    where: ArticlesWhereInput!
+    where: ArticlesWhereInput
     first: Int!
     after: String
   ): ArticleConnection!
 }
 
 input ArticlesWhereInput {
-  _id: String!
+  _id: String
 }

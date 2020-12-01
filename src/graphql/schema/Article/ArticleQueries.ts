@@ -1,6 +1,7 @@
 import { Article } from '~/models'
 import { Resolvers } from '~/types/codegen'
 
+import { compactMap } from '@boiler/f'
 import { connection } from '@boiler/graphql-connection-resolver'
 
 export const ArticleQueries: Resolvers['Query'] = {
@@ -10,7 +11,7 @@ export const ArticleQueries: Resolvers['Query'] = {
     },
     async nodes(parent, args) {
       const articles = await Article.find({
-        ...args.where,
+        ...compactMap(args.where ?? {}),
         ...(args.after
           ? {
               createdAt: {
@@ -23,6 +24,7 @@ export const ArticleQueries: Resolvers['Query'] = {
           createdAt: -1,
         })
         .limit(args.first + 1)
+        .exec()
 
       return articles
     },

@@ -59,7 +59,7 @@ export type Query = {
 
 
 export type QueryArticlesArgs = {
-  where: ArticlesWhereInput;
+  where?: Maybe<ArticlesWhereInput>;
   first: Scalars['Int'];
   after?: Maybe<Scalars['String']>;
 };
@@ -70,7 +70,7 @@ export type QueryNodeArgs = {
 };
 
 export type ArticlesWhereInput = {
-  _id: Scalars['String'];
+  _id?: Maybe<Scalars['String']>;
 };
 
 export type Node = {
@@ -227,7 +227,7 @@ export type ArticleEdgeResolvers<ContextType = MyContext, ParentType extends Res
 };
 
 export type QueryResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
-  articles?: Resolver<ResolversTypes['ArticleConnection'], ParentType, ContextType, RequireFields<QueryArticlesArgs, 'where' | 'first'>>;
+  articles?: Resolver<ResolversTypes['ArticleConnection'], ParentType, ContextType, RequireFields<QueryArticlesArgs, 'first'>>;
   node?: Resolver<Maybe<ResolversTypes['Node']>, ParentType, ContextType, RequireFields<QueryNodeArgs, 'id'>>;
   ping?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
 };

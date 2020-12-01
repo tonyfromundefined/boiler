@@ -35,7 +35,7 @@ type ArticleEdge {
 
 type Query {
   """Get articles"""
-  articles(where: ArticlesWhereInput!, first: Int!, after: String): ArticleConnection!
+  articles(where: ArticlesWhereInput, first: Int!, after: String): ArticleConnection!
 
   """Get object by ID (Global Object Identification)"""
   node(id: ID!): Node
@@ -45,7 +45,7 @@ type Query {
 }
 
 input ArticlesWhereInput {
-  _id: String!
+  _id: String
 }
 
 interface Node {
