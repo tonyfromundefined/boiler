@@ -7,3 +7,12 @@
 # Documentation here: https://yarnpkg.com/features/zero-installs
 !/.yarn/cache
 #/.pnp.*
+
+/.env
+/.env.*
+!/.env.example
+
+/build
+
+# Build cache
+/node_modules
