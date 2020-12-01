@@ -1,4 +1,5 @@
 import axios from 'axios'
+import * as R from 'ramda'
 import { Environment, Network, RecordSource, Store } from 'relay-runtime'
 
 const PORT = 3000
@@ -7,12 +8,15 @@ export function getInitialEnvironment() {
   const source = new RecordSource()
   const store = new Store(source)
 
-  const network = Network.create(async (operation, variables) => {
-    const { data } = await axios.post(`http://localhost:${PORT}/graphql`, {
-      query: operation.text,
-      variables,
-    })
-    return data
+  const network = Network.create((operation, variables) => {
+    return R.pipe(
+      () =>
+        axios.post(`http://localhost:${PORT}/graphql`, {
+          query: operation.text,
+          variables,
+        }),
+      R.andThen(({ data }) => data)
+    )()
   })
 
   return {

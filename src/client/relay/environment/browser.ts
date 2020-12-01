@@ -12,12 +12,15 @@ export function getEnvironment(_source?: any) {
     return environment
   }
 
-  const network = Network.create(async (operation, variables) => {
-    const { data } = await axios.post('/graphql', {
-      query: operation.text,
-      variables,
-    })
-    return data
+  const network = Network.create((operation, variables) => {
+    return R.pipe(
+      () =>
+        axios.post('/graphql', {
+          query: operation.text,
+          variables,
+        }),
+      R.andThen(({ data }) => data)
+    )()
   })
 
   if (_source) {
