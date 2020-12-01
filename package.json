@@ -7,7 +7,7 @@
     "codegen": "graphql-codegen",
     "dev": "yarn clean && webpack-cli --config ./webpack/dev.js",
     "dev:debug": "yarn clean && DEBUG=true webpack-cli --config ./webpack/dev.js",
-    "start": "NODE_ENV=production node ./lib/index.js",
+    "start": "NODE_ENV=production node ./build/index.js",
     "test": "dotenv -e .env -- jest --maxWorkers=8"
   },
   "dependencies": {
