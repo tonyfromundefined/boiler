@@ -4315,6 +4315,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"await-to-js@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "await-to-js@npm:2.1.1"
+  checksum: 84aed64fbad3e60ff78c027274a0cc9b01479b7cffb87994fd99be8a7d14abd311248e7f5430a1e19c04f9650e9490dd34007d6c298972819bbec3f88169a225
+  languageName: node
+  linkType: hard
+
 "aws-sign2@npm:~0.7.0":
   version: 0.7.0
   resolution: "aws-sign2@npm:0.7.0"
@@ -4326,6 +4333,15 @@ __metadata:
   version: 1.11.0
   resolution: "aws4@npm:1.11.0"
   checksum: d30dce2b73839974894d8283a06c53e8374b74d643d3b08340d84c364e01158be011fcfd1a88f8462be946d69055313a3038202f2eafd155b039aaab3549ba21
+  languageName: node
+  linkType: hard
+
+"axios-retry@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "axios-retry@npm:3.1.9"
+  dependencies:
+    is-retry-allowed: ^1.1.0
+  checksum: 1e6a4df3089bd08377734e2dcb58a6895b272ca9facd6e8b2d0388c342b31d39a1ec4592abe171d9f596bbab374fbc4de6e845d4eb6d7440c874e97933f29888
   languageName: node
   linkType: hard
 
@@ -4710,6 +4726,7 @@ __metadata:
     "@babel/preset-env": ^7.12.7
     "@babel/preset-typescript": ^7.12.7
     "@babel/runtime": ^7.12.5
+    "@emotion/babel-plugin": ^11.0.0
     "@emotion/react": ^11.1.1
     "@emotion/styled": ^11.0.0
     "@graphql-codegen/add": ^2.0.2
@@ -4742,7 +4759,9 @@ __metadata:
     apollo-server-core: ^2.19.0
     apollo-server-express: ^2.19.0
     apollo-server-plugin-base: ^0.10.2
+    await-to-js: ^2.1.1
     axios: ^0.21.0
+    axios-retry: ^3.1.9
     babel-loader: ^8.2.2
     babel-plugin-lodash: ^3.3.4
     babel-plugin-relay: ^10.1.0
@@ -9311,6 +9330,13 @@ fsevents@~2.1.2:
   dependencies:
     is-unc-path: ^1.0.0
   checksum: a93a7b57d8fa2090757eb2193a58fcf318cd2963787d25cd756842b75c1d78a814105245deec16303a0df3e9263dbb587d55545ad684d6035b3534016a2bc4b3
+  languageName: node
+  linkType: hard
+
+"is-retry-allowed@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "is-retry-allowed@npm:1.2.0"
+  checksum: 739384d2662f38fe0edd1bcdf7f88551c6f1b1fdc7fde3ba86442cd675d337f14100d6479bcbb4635f7e38d11e1a2c2e173a52ba39547631960641d9fbe65531
   languageName: node
   linkType: hard
 

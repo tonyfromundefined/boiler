@@ -16,6 +16,7 @@ export function getEnvironment(_source?: any) {
     return R.pipe(
       () =>
         axios.post('/graphql', {
+          id: operation.id,
           query: operation.text,
           variables,
         }),

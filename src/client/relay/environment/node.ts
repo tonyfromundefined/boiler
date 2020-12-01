@@ -12,6 +12,7 @@ export function getInitialEnvironment() {
     return R.pipe(
       () =>
         axios.post(`http://localhost:${PORT}/graphql`, {
+          id: operation.id,
           query: operation.text,
           variables,
         }),
