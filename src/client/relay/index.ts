@@ -13,14 +13,6 @@ export function getRelayServerSideProps<T extends { variables: any }>({
   variables?: (ctx: GetStaticPropsContext) => T['variables']
 }) {
   return async (ctx: GetStaticPropsContext) => {
-    if (typeof window !== 'undefined') {
-      return {
-        props: {
-          source: {},
-        },
-      }
-    }
-
     const { environment, source } = getInitialEnvironment()
 
     await fetchQuery(environment, query, variables?.(ctx) ?? {})
