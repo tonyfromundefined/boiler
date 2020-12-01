@@ -4,3 +4,6 @@
 
 /build
 /coverage
+
+/src/client/__generated__
+/src/graphql/__generated__
