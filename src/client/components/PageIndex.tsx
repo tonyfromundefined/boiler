@@ -38,9 +38,6 @@ const query = graphql`
 
 export const getServerSideProps = getRelayServerSideProps<PageIndexQuery>({
   query,
-  variables() {
-    return {}
-  },
 })
 
 const Container = styled.div``
