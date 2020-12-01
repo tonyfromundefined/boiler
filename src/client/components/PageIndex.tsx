@@ -10,7 +10,6 @@ import {
   getRelayServerSideProps,
   NextPageRelay,
 } from '../relay'
-import Version from './Version'
 
 const PageIndex: NextPageRelay = ({ relaySource }) => {
   return (
