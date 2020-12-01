@@ -30,7 +30,6 @@ The Production-ready GraphQL boilerplate.
 - Babel
   - `@babel/preset-typescript`
   - `@babel/preset-env` (Node.js 14)
-- Persisted Queries
 - GraphQL JIT Executor
 - Sentry Apollo Plugin
 - Winston Logger

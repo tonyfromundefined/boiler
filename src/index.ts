@@ -14,13 +14,11 @@ import R from 'ramda'
 import { parse } from 'url'
 
 import logger from '@boiler/logger'
-import { hydrateQuery } from '@boiler/middleware-relay-persisted-queries'
 
 import { getAgenda, startAgenda } from './agenda'
 import { STAGE } from './constants'
 import { createConnection } from './db'
 import { createApolloServer } from './graphql'
-import { QueryMap } from './models'
 import restapi from './restapi'
 
 const PORT = 3000
@@ -50,16 +48,6 @@ async function bootstrap() {
   app.use(cors())
   app.use(bodyParser.json())
   app.use(cookieParser())
-
-  app.use(
-    '/graphql',
-    hydrateQuery(
-      R.pipe(
-        (queryHash: string) => QueryMap.findOne({ queryHash }).exec(),
-        R.andThen((queryMap) => queryMap?.query ?? null)
-      )
-    )
-  )
 
   apolloServer.applyMiddleware({
     app,

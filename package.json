@@ -2,15 +2,14 @@
   "name": "boiler",
   "version": "0.0.0",
   "scripts": {
-    "build": "yarn clean && yarn relay --persist-output ./queryMaps.json && next build ./src/client && webpack-cli --config ./webpack/build.js",
+    "build": "yarn clean && next build ./src/client && webpack-cli --config ./webpack/build.js",
     "clean": "rimraf ./node_modules && rimraf ./build",
     "codegen": "graphql-codegen",
     "dev": "webpack-cli --config ./webpack/dev.js",
     "dev:debug": "yarn clean && DEBUG=true webpack-cli --config ./webpack/dev.js",
     "relay": "relay-compiler --src ./src/client/components --schema ./src/graphql/__generated__/schema.graphql --language typescript --extensions ts tsx --artifactDirectory ./src/client/__generated__ --customScalars.DateTime=Date",
     "start": "NODE_ENV=production node ./build/index.js",
-    "test": "dotenv -e .env -- jest --maxWorkers=8",
-    "uploadQueryMaps": "node ./build/uploadQueryMaps"
+    "test": "dotenv -e .env -- jest --maxWorkers=8"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",

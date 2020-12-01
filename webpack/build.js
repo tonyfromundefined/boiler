@@ -12,7 +12,6 @@ module.exports = {
   mode: 'production',
   entry: {
     index: path.resolve('./src/index.ts'),
-    uploadQueryMaps: path.resolve('./src/uploadQueryMaps.ts'),
   },
   output: {
     path: path.resolve('./build'),
