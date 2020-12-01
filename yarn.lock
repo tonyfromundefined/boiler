@@ -3150,6 +3150,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/ramda@npm:^0.27.32":
+  version: 0.27.32
+  resolution: "@types/ramda@npm:0.27.32"
+  dependencies:
+    ts-toolbelt: ^6.15.1
+  checksum: c097bbefe31a8355d08f1b4ac6f52c7baf7f2ea7b37f7eff8345a539fcf88a037107cda37afceab728a74d5f6fe7514f4463013cdedeb2e187e127c68b9fa8db
+  languageName: node
+  linkType: hard
+
 "@types/range-parser@npm:*":
   version: 1.2.3
   resolution: "@types/range-parser@npm:1.2.3"
@@ -4650,6 +4659,7 @@ __metadata:
     "@types/mongoose": 5.7.36
     "@types/mongoose-delete": ^0.5.2
     "@types/node": ^14.14.10
+    "@types/ramda": ^0.27.32
     "@types/react": ^17.0.0
     "@types/react-dom": ^17.0.0
     agenda: ^3.1.0
@@ -4667,11 +4677,13 @@ __metadata:
     dataloader: ^1
     dotenv: ^8.2.0
     express: ^4.17.1
+    express-async-handler: ^1.1.4
     fork-ts-checker-webpack-plugin: ^6.0.4
     graphql: ^15.4.0
     graphql-dataloader-mongoose: ^1.0.1
     graphql-iso-date: ^3.6.1
     graphql-jit: ^0.4.3
+    graphql-tag: ^2.11.0
     graphql-voyager: ^1.0.0-rc.31
     jest: ^26.6.3
     jest-cli: ^26.6.3
@@ -7236,6 +7248,13 @@ __metadata:
     jest-message-util: ^26.6.2
     jest-regex-util: ^26.0.0
   checksum: a4ec4cbafac8b05eb02a8af5f086dede84a3a701abbfdafeadca24a1d286bd07035b32b2864a6ff012a733009beb0b96c10469b40832c5ee0d2dd0bb6b50a5b0
+  languageName: node
+  linkType: hard
+
+"express-async-handler@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "express-async-handler@npm:1.1.4"
+  checksum: 0cc72e8be4d748d40c27b0049653d2143c75ddbce0d3e7d5319db4d1a364f3934cd8eeb77ea3a2919a80e1e5eb9666f3008328fbe70141d4ce0f0e11d368be18
   languageName: node
   linkType: hard
 
@@ -15051,6 +15070,13 @@ fsevents@~2.1.2:
     typescript:
       optional: true
   checksum: 78341a27939de565e2754ff65ebb689743c16e3295528089d143c08d91842cf9029c3d6b3c95a9a20854a114a7904329d02c710d63f7ce4dbf671b8a3e560ac1
+  languageName: node
+  linkType: hard
+
+"ts-toolbelt@npm:^6.15.1":
+  version: 6.15.5
+  resolution: "ts-toolbelt@npm:6.15.5"
+  checksum: d2f585ee3439ae7a72dd7c00630491195b2a4f34107c595d567242482b9fa911b5a9b5921fb4984506c2f7d8efce61351c7f48519438df67b6c0a8dcd40c862c
   languageName: node
   linkType: hard
 

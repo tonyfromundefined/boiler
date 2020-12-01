@@ -3,17 +3,18 @@ import { STAGE } from '~/constants'
 
 import { executor } from '@boiler/apollo-jit-executor'
 
-import { createContextFactory, MyContext } from './context'
+import { createContextFactory } from './context'
 import { getSchema } from './schema'
 
 export function createApolloServer() {
+  const createContext = createContextFactory()
+
   return new ApolloServer({
     schema: getSchema(),
     playground: STAGE !== 'production',
     introspection: STAGE !== 'production',
     tracing: false,
-    // plugins: [ApolloSentryPlugin],
-    context: createContextFactory(),
+    context: createContext,
     executor,
   })
 }
