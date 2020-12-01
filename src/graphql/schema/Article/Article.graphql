@@ -1,0 +1,45 @@
+"""
+Article
+"""
+type Article implements Node {
+  id: ID!
+
+  """
+  Original ID
+  """
+  _id: String!
+
+  """
+  Content
+  """
+  content: String!
+}
+
+type ArticleConnection {
+  """
+  https://facebook.github.io/relay/graphql/connections.htm#sec-Edge-Types
+  """
+  edges: [ArticleEdge!]!
+
+  """
+  Flattened list of Article type
+  """
+  nodes: [Article!]!
+
+  """
+  https://facebook.github.io/relay/graphql/connections.htm#sec-undefined.PageInfo
+  """
+  pageInfo: PageInfo!
+}
+
+type ArticleEdge {
+  """
+  https://facebook.github.io/relay/graphql/connections.htm#sec-Cursor
+  """
+  cursor: String!
+
+  """
+  https://facebook.github.io/relay/graphql/connections.htm#sec-Node
+  """
+  node: Article!
+}

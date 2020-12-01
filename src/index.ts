@@ -14,8 +14,10 @@ import { parse } from 'url'
 
 import logger from '@boiler/logger'
 
+import { getAgenda, startAgenda } from './agenda'
 import { STAGE } from './constants'
 import { createConnection } from './db'
+import { createApolloServer } from './graphql'
 import restapi from './restapi'
 
 const PORT = 3000
@@ -25,6 +27,7 @@ async function bootstrap() {
 
   const app = express()
   const server = createServer(app)
+  const apolloServer = createApolloServer()
 
   const client = next({
     dev: process.env.NODE_ENV !== 'production',
@@ -34,19 +37,25 @@ async function bootstrap() {
 
   const render = client.getRequestHandler()
 
-  await Promise.all([createConnection()])
+  await Promise.all([
+    createConnection().then(() => startAgenda()),
+    client.prepare(),
+  ])
 
-  app.get('/health', (req, res) => {
-    res.send('ok')
-  })
+  app.get('/health', (req, res) => res.send('ok'))
 
   app.use(cors())
   app.use(bodyParser.json())
   app.use(cookieParser())
 
+  apolloServer.applyMiddleware({
+    app,
+  })
+  apolloServer.installSubscriptionHandlers(server)
+
   app.use('/api', restapi)
 
-  // app.use('/_admin/agendash', Agendash(getAgenda()))
+  app.use('/agendash', Agendash(getAgenda()))
   app.use('/voyager', voyagerMiddleware({ endpointUrl: '/graphql' }))
 
   app.get('*', (req, res) => render(req, res, parse(req.url, true)))

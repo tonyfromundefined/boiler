@@ -3071,13 +3071,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mongoose@npm:*, @types/mongoose@npm:^5.10.1":
+"@types/mongoose@npm:*":
   version: 5.10.1
   resolution: "@types/mongoose@npm:5.10.1"
   dependencies:
     "@types/mongodb": "*"
     "@types/node": "*"
   checksum: 2517d1e9b6563ffc94a34b44627404cd679458d33f8639b6b58acef4ee31036844fe4926e2e69813c8fd4d00edec89df65993c76a20f43db04303cddfaa2d1e6
+  languageName: node
+  linkType: hard
+
+"@types/mongoose@npm:5.7.36":
+  version: 5.7.36
+  resolution: "@types/mongoose@npm:5.7.36"
+  dependencies:
+    "@types/mongodb": "*"
+    "@types/node": "*"
+  checksum: 8d83e182bcd139f013e5419f8ad4c65507c0cdd4765068629d026ea274cc6894d962e509033071822f36147946554a8f7c905e24f2372791cd7efd7596915bc9
   languageName: node
   linkType: hard
 
@@ -4541,7 +4551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bl@npm:^2.2.1":
+"bl@npm:^2.2.0, bl@npm:^2.2.1":
   version: 2.2.1
   resolution: "bl@npm:2.2.1"
   dependencies:
@@ -4637,7 +4647,7 @@ __metadata:
     "@types/graphql-iso-date": ^3.4.0
     "@types/jest": ^26.0.15
     "@types/lodash": ^4.14.165
-    "@types/mongoose": ^5.10.1
+    "@types/mongoose": 5.7.36
     "@types/mongoose-delete": ^0.5.2
     "@types/node": ^14.14.10
     "@types/react": ^17.0.0
@@ -4651,13 +4661,15 @@ __metadata:
     babel-loader: ^8.2.2
     babel-plugin-lodash: ^3.3.4
     body-parser: ^1.19.0
+    buffer: ^6.0.3
     cookie-parser: ^1.4.5
     cors: ^2.8.5
-    dataloader: 2.0.0
+    dataloader: ^1
     dotenv: ^8.2.0
     express: ^4.17.1
     fork-ts-checker-webpack-plugin: ^6.0.4
     graphql: ^15.4.0
+    graphql-dataloader-mongoose: ^1.0.1
     graphql-iso-date: ^3.6.1
     graphql-jit: ^0.4.3
     graphql-voyager: ^1.0.0-rc.31
@@ -4665,7 +4677,7 @@ __metadata:
     jest-cli: ^26.6.3
     lodash: ^4.17.20
     mongodb-memory-server: ^6.9.2
-    mongoose: ^5.11.0
+    mongoose: 5.9.27
     mongoose-delete: ^0.5.3
     mongoose-timestamp: ^0.6.0
     next: ^10.0.3
@@ -4973,6 +4985,16 @@ __metadata:
     base64-js: ^1.3.1
     ieee754: ^1.1.13
   checksum: 1750ac396eb36e0157ff5299509723ac0681338ef6cd40b039bc86d59c8b9a9494e99db992836eb6d637de0b270b53ec1a62d4a1c9faeaa51468cc340e553984
+  languageName: node
+  linkType: hard
+
+"buffer@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "buffer@npm:6.0.3"
+  dependencies:
+    base64-js: ^1.3.1
+    ieee754: ^1.2.1
+  checksum: a8cf6a58571dc7c43b24ab821ad4c72222d9040775f49fd143a30fad45f33ec0a8e0d572ca80d589ad4f8b4715aa012c029dc2b925dc95467f135c2d13d7abfb
   languageName: node
   linkType: hard
 
@@ -6193,6 +6215,13 @@ __metadata:
   version: 2.0.0
   resolution: "dataloader@npm:2.0.0"
   checksum: 0165c2e80751d269c33d2a14b0078a4f3853cb010e2531e7aa99523aba8d0cdc922b9ad67e4c2bb9074c90e0ee0a41b6e7f5f63c40d31224a71c8a0b703f4be3
+  languageName: node
+  linkType: hard
+
+"dataloader@npm:^1, dataloader@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "dataloader@npm:1.4.0"
+  checksum: 1c698b6d4734b66ba1cf445eb89de92474f04d836d906555038d2839b8ec61f67df0abd1b5f798248235c2e4c01a791345d62c292a0bbe63251efc3b0dba3bca
   languageName: node
   linkType: hard
 
@@ -8062,6 +8091,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"graphql-dataloader-mongoose@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "graphql-dataloader-mongoose@npm:1.0.1"
+  dependencies:
+    dataloader: ^1.4.0
+    lodash: ^4.17.14
+    mongoose: ^5.6.4
+  checksum: 800ef049c1cf8f4e6f4aeb6e9d47063559436e3bbebd8836b9e1f9b9ea6134f088f0d7298c56cc805ac6c8a1dc66c5d902c69a4cc87f29a29739e4a2cc01a440
+  languageName: node
+  linkType: hard
+
 "graphql-extensions@npm:^0.12.6":
   version: 0.12.6
   resolution: "graphql-extensions@npm:0.12.6"
@@ -8575,7 +8615,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ieee754@npm:^1.1.13, ieee754@npm:^1.1.4":
+"ieee754@npm:^1.1.13, ieee754@npm:^1.1.4, ieee754@npm:^1.2.1":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 6c1cfab995ecab3b0dbb6cfb7e192686eb02f0f8e788f2d962e1fc02e2d5ab38a85e06d417221f136bd029663a77cdb920d99605d68d3730a05597dd7910426a
@@ -10996,6 +11036,23 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"mongodb@npm:3.5.10":
+  version: 3.5.10
+  resolution: "mongodb@npm:3.5.10"
+  dependencies:
+    bl: ^2.2.0
+    bson: ^1.1.4
+    denque: ^1.4.1
+    require_optional: ^1.0.1
+    safe-buffer: ^5.1.2
+    saslprep: ^1.0.0
+  dependenciesMeta:
+    saslprep:
+      optional: true
+  checksum: f13f4c434510363b347f502cfb06e7334aae532a56e79411dfc480b38eec14fbfd7d9e7e40b0fe98beff285f09d08ac1f8134df5be881fbb9e2b5eebb5ccb2f4
+  languageName: node
+  linkType: hard
+
 "mongodb@npm:3.6.2":
   version: 3.6.2
   resolution: "mongodb@npm:3.6.2"
@@ -11102,7 +11159,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.0, mongoose@npm:^5.11.0":
+"mongoose@npm:5.11.0, mongoose@npm:^5.6.4":
   version: 5.11.0
   resolution: "mongoose@npm:5.11.0"
   dependencies:
@@ -11122,6 +11179,25 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"mongoose@npm:5.9.27":
+  version: 5.9.27
+  resolution: "mongoose@npm:5.9.27"
+  dependencies:
+    bson: ^1.1.4
+    kareem: 2.3.1
+    mongodb: 3.5.10
+    mongoose-legacy-pluralize: 1.0.2
+    mpath: 0.7.0
+    mquery: 3.2.2
+    ms: 2.1.2
+    regexp-clone: 1.0.0
+    safe-buffer: 5.2.1
+    sift: 7.0.1
+    sliced: 1.0.1
+  checksum: 27c0c052c2841fbf780855668fa941321d1cf197d72d819ef64fdfb8446ff13641adcee9809e1be766d45655f4aae0788ff3dcc96846a5236440d0339b975fa4
+  languageName: node
+  linkType: hard
+
 "move-concurrently@npm:^1.0.1":
   version: 1.0.1
   resolution: "move-concurrently@npm:1.0.1"
@@ -11133,6 +11209,13 @@ fsevents@~2.1.2:
     rimraf: ^2.5.4
     run-queue: ^1.0.3
   checksum: 0761308ddbaf75291fff3ca26c0297a781d545e76aa34b7c985780d251f75e422433947dc9091d464ca7febef86fe6ecaa60746eb7076adac4a0c620b83540f5
+  languageName: node
+  linkType: hard
+
+"mpath@npm:0.7.0":
+  version: 0.7.0
+  resolution: "mpath@npm:0.7.0"
+  checksum: 76e271ff01a637452b1b8bb36825e74020e23d6fa1792455dc2992931b3fdfffcd637dcbe4c02a6bbb9e264f3920be4c5dcf42041f37176b00d5c8175604c4c1
   languageName: node
   linkType: hard
 

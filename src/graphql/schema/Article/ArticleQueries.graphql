@@ -1,0 +1,14 @@
+extend type Query {
+  """
+  Get articles
+  """
+  articles(
+    where: ArticlesWhereInput!
+    first: Int!
+    after: String
+  ): ArticleConnection!
+}
+
+input ArticlesWhereInput {
+  _id: String!
+}

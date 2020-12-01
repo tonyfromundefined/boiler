@@ -62,7 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/graphql-iso-date", "npm:3.4.0"],
             ["@types/jest", "npm:26.0.15"],
             ["@types/lodash", "npm:4.14.165"],
-            ["@types/mongoose", "npm:5.10.1"],
+            ["@types/mongoose", "npm:5.7.36"],
             ["@types/mongoose-delete", "npm:0.5.2"],
             ["@types/node", "npm:14.14.10"],
             ["@types/react", "npm:17.0.0"],
@@ -76,13 +76,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-loader", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:8.2.2"],
             ["babel-plugin-lodash", "npm:3.3.4"],
             ["body-parser", "npm:1.19.0"],
+            ["buffer", "npm:6.0.3"],
             ["cookie-parser", "npm:1.4.5"],
             ["cors", "npm:2.8.5"],
-            ["dataloader", "npm:2.0.0"],
+            ["dataloader", "npm:1.4.0"],
             ["dotenv", "npm:8.2.0"],
             ["express", "npm:4.17.1"],
             ["fork-ts-checker-webpack-plugin", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:6.0.4"],
             ["graphql", "npm:15.4.0"],
+            ["graphql-dataloader-mongoose", "npm:1.0.1"],
             ["graphql-iso-date", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:3.6.1"],
             ["graphql-jit", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.4.3"],
             ["graphql-voyager", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:1.0.0-rc.31"],
@@ -90,7 +92,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-cli", "npm:26.6.3"],
             ["lodash", "npm:4.17.20"],
             ["mongodb-memory-server", "npm:6.9.2"],
-            ["mongoose", "npm:5.11.0"],
+            ["mongoose", "npm:5.9.27"],
             ["mongoose-delete", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.5.3"],
             ["mongoose-timestamp", "npm:0.6.0"],
             ["next", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:10.0.3"],
@@ -4853,6 +4855,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.10"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.7.36", {
+          "packageLocation": "./.yarn/cache/@types-mongoose-npm-5.7.36-5dc8a3b9da-8d83e182bc.zip/node_modules/@types/mongoose/",
+          "packageDependencies": [
+            ["@types/mongoose", "npm:5.7.36"],
+            ["@types/mongodb", "npm:3.5.34"],
+            ["@types/node", "npm:14.14.10"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@types/mongoose-delete", [
@@ -6845,7 +6856,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/graphql-iso-date", "npm:3.4.0"],
             ["@types/jest", "npm:26.0.15"],
             ["@types/lodash", "npm:4.14.165"],
-            ["@types/mongoose", "npm:5.10.1"],
+            ["@types/mongoose", "npm:5.7.36"],
             ["@types/mongoose-delete", "npm:0.5.2"],
             ["@types/node", "npm:14.14.10"],
             ["@types/react", "npm:17.0.0"],
@@ -6859,13 +6870,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-loader", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:8.2.2"],
             ["babel-plugin-lodash", "npm:3.3.4"],
             ["body-parser", "npm:1.19.0"],
+            ["buffer", "npm:6.0.3"],
             ["cookie-parser", "npm:1.4.5"],
             ["cors", "npm:2.8.5"],
-            ["dataloader", "npm:2.0.0"],
+            ["dataloader", "npm:1.4.0"],
             ["dotenv", "npm:8.2.0"],
             ["express", "npm:4.17.1"],
             ["fork-ts-checker-webpack-plugin", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:6.0.4"],
             ["graphql", "npm:15.4.0"],
+            ["graphql-dataloader-mongoose", "npm:1.0.1"],
             ["graphql-iso-date", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:3.6.1"],
             ["graphql-jit", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.4.3"],
             ["graphql-voyager", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:1.0.0-rc.31"],
@@ -6873,7 +6886,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-cli", "npm:26.6.3"],
             ["lodash", "npm:4.17.20"],
             ["mongodb-memory-server", "npm:6.9.2"],
-            ["mongoose", "npm:5.11.0"],
+            ["mongoose", "npm:5.9.27"],
             ["mongoose-delete", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.5.3"],
             ["mongoose-timestamp", "npm:0.6.0"],
             ["next", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:10.0.3"],
@@ -7168,6 +7181,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/buffer-npm-5.7.1-513ef8259e-1750ac396e.zip/node_modules/buffer/",
           "packageDependencies": [
             ["buffer", "npm:5.7.1"],
+            ["base64-js", "npm:1.5.1"],
+            ["ieee754", "npm:1.2.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.0.3", {
+          "packageLocation": "./.yarn/cache/buffer-npm-6.0.3-cd90dfedfe-a8cf6a5857.zip/node_modules/buffer/",
+          "packageDependencies": [
+            ["buffer", "npm:6.0.3"],
             ["base64-js", "npm:1.5.1"],
             ["ieee754", "npm:1.2.1"]
           ],
@@ -8555,6 +8577,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dataloader", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/dataloader-npm-1.4.0-ba03bd2183-1c698b6d47.zip/node_modules/dataloader/",
+          "packageDependencies": [
+            ["dataloader", "npm:1.4.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/dataloader-npm-2.0.0-216fa8d208-0165c2e807.zip/node_modules/dataloader/",
           "packageDependencies": [
@@ -10705,6 +10734,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/graphql",
             "graphql"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["graphql-dataloader-mongoose", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/graphql-dataloader-mongoose-npm-1.0.1-27a6fb90da-800ef049c1.zip/node_modules/graphql-dataloader-mongoose/",
+          "packageDependencies": [
+            ["graphql-dataloader-mongoose", "npm:1.0.1"],
+            ["dataloader", "npm:1.4.0"],
+            ["lodash", "npm:4.17.20"],
+            ["mongoose", "npm:5.11.0"]
           ],
           "linkType": "HARD",
         }]
@@ -14117,6 +14158,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["npm:3.5.10", {
+          "packageLocation": "./.yarn/cache/mongodb-npm-3.5.10-8a9c3616a9-f13f4c4345.zip/node_modules/mongodb/",
+          "packageDependencies": [
+            ["mongodb", "npm:3.5.10"],
+            ["bl", "npm:2.2.1"],
+            ["bson", "npm:1.1.5"],
+            ["denque", "npm:1.4.1"],
+            ["require_optional", "npm:1.0.1"],
+            ["safe-buffer", "npm:5.2.1"],
+            ["saslprep", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:3.5.11", {
           "packageLocation": "./.yarn/cache/mongodb-npm-3.5.11-000e3e00d3-aa0ed1f92b.zip/node_modules/mongodb/",
           "packageDependencies": [
@@ -14233,6 +14287,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sliced", "npm:1.0.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.9.27", {
+          "packageLocation": "./.yarn/cache/mongoose-npm-5.9.27-ef7224a9d7-27c0c052c2.zip/node_modules/mongoose/",
+          "packageDependencies": [
+            ["mongoose", "npm:5.9.27"],
+            ["bson", "npm:1.1.5"],
+            ["kareem", "npm:2.3.1"],
+            ["mongodb", "npm:3.5.10"],
+            ["mongoose-legacy-pluralize", "virtual:ef7224a9d7e1bf76a0b42667e4e1ed1de665ffe02de96818fdb3cfc241bccec4268356f030cb21db922fc826a2695afb71e489b6668bc8e2fe415025e4ba1ba3#npm:1.0.2"],
+            ["mpath", "npm:0.7.0"],
+            ["mquery", "npm:3.2.2"],
+            ["ms", "npm:2.1.2"],
+            ["regexp-clone", "npm:1.0.0"],
+            ["safe-buffer", "npm:5.2.1"],
+            ["sift", "npm:7.0.1"],
+            ["sliced", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["mongoose-delete", [
@@ -14247,8 +14319,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/mongoose-delete-virtual-6586af3b3c/0/cache/mongoose-delete-npm-0.5.3-6bf405bc23-e687afb8e6.zip/node_modules/mongoose-delete/",
           "packageDependencies": [
             ["mongoose-delete", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.5.3"],
-            ["@types/mongoose", "npm:5.10.1"],
-            ["mongoose", "npm:5.11.0"]
+            ["@types/mongoose", "npm:5.7.36"],
+            ["mongoose", "npm:5.9.27"]
           ],
           "packagePeers": [
             "@types/mongoose",
@@ -14271,6 +14343,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mongoose-legacy-pluralize", "virtual:69896c9612e57796f1586217b934f9a36ac932b9fd9d2f8671ba2dc341aa08e048dc9375cf19088f84fa45b6996cc701ab8daeeb61312dd9ab03d66f6798e1f1#npm:1.0.2"],
             ["@types/mongoose", null],
             ["mongoose", "npm:5.11.0"]
+          ],
+          "packagePeers": [
+            "@types/mongoose",
+            "mongoose"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:ef7224a9d7e1bf76a0b42667e4e1ed1de665ffe02de96818fdb3cfc241bccec4268356f030cb21db922fc826a2695afb71e489b6668bc8e2fe415025e4ba1ba3#npm:1.0.2", {
+          "packageLocation": "./.yarn/$$virtual/mongoose-legacy-pluralize-virtual-8c24f75222/0/cache/mongoose-legacy-pluralize-npm-1.0.2-2fbdda9a5a-a1f86450b3.zip/node_modules/mongoose-legacy-pluralize/",
+          "packageDependencies": [
+            ["mongoose-legacy-pluralize", "virtual:ef7224a9d7e1bf76a0b42667e4e1ed1de665ffe02de96818fdb3cfc241bccec4268356f030cb21db922fc826a2695afb71e489b6668bc8e2fe415025e4ba1ba3#npm:1.0.2"],
+            ["@types/mongoose", null],
+            ["mongoose", "npm:5.9.27"]
           ],
           "packagePeers": [
             "@types/mongoose",
@@ -14305,6 +14390,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mpath", [
+        ["npm:0.7.0", {
+          "packageLocation": "./.yarn/cache/mpath-npm-0.7.0-c04255a5f1-76e271ff01.zip/node_modules/mpath/",
+          "packageDependencies": [
+            ["mpath", "npm:0.7.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:0.8.0", {
           "packageLocation": "./.yarn/cache/mpath-npm-0.8.0-0b34701fd8-42d11142b1.zip/node_modules/mpath/",
           "packageDependencies": [

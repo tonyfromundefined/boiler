@@ -13,7 +13,7 @@ export function getSchema() {
     return schema
   }
 
-  schema = makeExecutableSchema({
+  return (schema = makeExecutableSchema({
     typeDefs,
     resolvers: resolvers as any,
     inheritResolversFromInterfaces: true,
@@ -22,7 +22,5 @@ export function getSchema() {
         return logger.error(e.message)
       },
     },
-  })
-
-  return schema
+  }))
 }

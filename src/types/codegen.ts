@@ -1,9 +1,12 @@
 import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
+import { DocumentArticle } from '../models/Article';
 import { MyContext } from '../graphql/context';
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+export type RequireFields<T, K extends keyof T> = { [X in Exclude<keyof T, K>]?: T[X] } & { [P in K]-?: NonNullable<T[P]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -16,14 +19,80 @@ export type Scalars = {
   Time: any;
 };
 
+/** Article */
+export type Article = Node & {
+  __typename?: 'Article';
+  id: Scalars['ID'];
+  /** Original ID */
+  _id: Scalars['String'];
+  /** Content */
+  content: Scalars['String'];
+};
+
+export type ArticleConnection = {
+  __typename?: 'ArticleConnection';
+  /** https://facebook.github.io/relay/graphql/connections.htm#sec-Edge-Types */
+  edges: Array<ArticleEdge>;
+  /** Flattened list of Article type */
+  nodes: Array<Article>;
+  /** https://facebook.github.io/relay/graphql/connections.htm#sec-undefined.PageInfo */
+  pageInfo: PageInfo;
+};
+
+export type ArticleEdge = {
+  __typename?: 'ArticleEdge';
+  /** https://facebook.github.io/relay/graphql/connections.htm#sec-Cursor */
+  cursor: Scalars['String'];
+  /** https://facebook.github.io/relay/graphql/connections.htm#sec-Node */
+  node: Article;
+};
+
 export type Query = {
   __typename?: 'Query';
+  /** Get articles */
+  articles: ArticleConnection;
+  /** Get object by ID (Global Object Identification) */
+  node?: Maybe<Node>;
   /** returns true */
   ping: Scalars['Boolean'];
 };
 
 
+export type QueryArticlesArgs = {
+  where: ArticlesWhereInput;
+  first: Scalars['Int'];
+  after?: Maybe<Scalars['String']>;
+};
 
+
+export type QueryNodeArgs = {
+  id: Scalars['ID'];
+};
+
+export type ArticlesWhereInput = {
+  _id: Scalars['String'];
+};
+
+export type Node = {
+  /** Unique ID in the schema (Global Object Identification) */
+  id: Scalars['ID'];
+};
+
+
+
+
+/** PageInfo cursor, as defined in https://facebook.github.io/relay/graphql/connections.htm#sec-undefined.PageInfo */
+export type PageInfo = {
+  __typename?: 'PageInfo';
+  /** The cursor corresponding to the first nodes in edges. Null if the connection is empty. */
+  startCursor?: Maybe<Scalars['String']>;
+  /** The cursor corresponding to the last nodes in edges. Null if the connection is empty. */
+  endCursor?: Maybe<Scalars['String']>;
+  /** Used to indicate whether more edges exist following the set defined by the clients arguments. */
+  hasNextPage: Scalars['Boolean'];
+  /** Used to indicate whether more edges exist prior to the set defined by the clients arguments. */
+  hasPreviousPage: Scalars['Boolean'];
+};
 
 
 
@@ -103,26 +172,69 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
+  Article: ResolverTypeWrapper<DocumentArticle>;
+  ID: ResolverTypeWrapper<Scalars['ID']>;
+  String: ResolverTypeWrapper<Scalars['String']>;
+  ArticleConnection: ResolverTypeWrapper<Omit<ArticleConnection, 'edges' | 'nodes'> & { edges: Array<ResolversTypes['ArticleEdge']>, nodes: Array<ResolversTypes['Article']> }>;
+  ArticleEdge: ResolverTypeWrapper<Omit<ArticleEdge, 'node'> & { node: ResolversTypes['Article'] }>;
   Query: ResolverTypeWrapper<{}>;
+  Int: ResolverTypeWrapper<Scalars['Int']>;
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+  ArticlesWhereInput: ArticlesWhereInput;
+  Node: ResolversTypes['Article'];
   DateTime: ResolverTypeWrapper<Scalars['DateTime']>;
   Date: ResolverTypeWrapper<Scalars['Date']>;
   Time: ResolverTypeWrapper<Scalars['Time']>;
-  String: ResolverTypeWrapper<Scalars['String']>;
+  PageInfo: ResolverTypeWrapper<PageInfo>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
+  Article: DocumentArticle;
+  ID: Scalars['ID'];
+  String: Scalars['String'];
+  ArticleConnection: Omit<ArticleConnection, 'edges' | 'nodes'> & { edges: Array<ResolversParentTypes['ArticleEdge']>, nodes: Array<ResolversParentTypes['Article']> };
+  ArticleEdge: Omit<ArticleEdge, 'node'> & { node: ResolversParentTypes['Article'] };
   Query: {};
+  Int: Scalars['Int'];
   Boolean: Scalars['Boolean'];
+  ArticlesWhereInput: ArticlesWhereInput;
+  Node: ResolversParentTypes['Article'];
   DateTime: Scalars['DateTime'];
   Date: Scalars['Date'];
   Time: Scalars['Time'];
-  String: Scalars['String'];
+  PageInfo: PageInfo;
+};
+
+export type ArticleResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['Article'] = ResolversParentTypes['Article']> = {
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  _id?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  content?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type ArticleConnectionResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['ArticleConnection'] = ResolversParentTypes['ArticleConnection']> = {
+  edges?: Resolver<Array<ResolversTypes['ArticleEdge']>, ParentType, ContextType>;
+  nodes?: Resolver<Array<ResolversTypes['Article']>, ParentType, ContextType>;
+  pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type ArticleEdgeResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['ArticleEdge'] = ResolversParentTypes['ArticleEdge']> = {
+  cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  node?: Resolver<ResolversTypes['Article'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type QueryResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
+  articles?: Resolver<ResolversTypes['ArticleConnection'], ParentType, ContextType, RequireFields<QueryArticlesArgs, 'where' | 'first'>>;
+  node?: Resolver<Maybe<ResolversTypes['Node']>, ParentType, ContextType, RequireFields<QueryNodeArgs, 'id'>>;
   ping?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+};
+
+export type NodeResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['Node'] = ResolversParentTypes['Node']> = {
+  __resolveType: TypeResolveFn<'Article', ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
 };
 
 export interface DateTimeScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['DateTime'], any> {
@@ -137,11 +249,24 @@ export interface TimeScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes
   name: 'Time';
 }
 
+export type PageInfoResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['PageInfo'] = ResolversParentTypes['PageInfo']> = {
+  startCursor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  endCursor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  hasNextPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  hasPreviousPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type Resolvers<ContextType = MyContext> = {
+  Article?: ArticleResolvers<ContextType>;
+  ArticleConnection?: ArticleConnectionResolvers<ContextType>;
+  ArticleEdge?: ArticleEdgeResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
+  Node?: NodeResolvers<ContextType>;
   DateTime?: GraphQLScalarType;
   Date?: GraphQLScalarType;
   Time?: GraphQLScalarType;
+  PageInfo?: PageInfoResolvers<ContextType>;
 };
 
 

@@ -1,0 +1,6 @@
+extend type Query {
+  """
+  Get object by ID (Global Object Identification)
+  """
+  node(id: ID!): Node
+}

@@ -19,5 +19,6 @@ generates:
       - typescript-resolvers
     config:
       contextType: ../graphql/context#MyContext
-      # mappers:
+      mappers:
+        Article: ../models/Article#DocumentArticle
       noNamespaces: true

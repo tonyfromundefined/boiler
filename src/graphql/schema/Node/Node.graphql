@@ -1,0 +1,6 @@
+interface Node {
+  """
+  Unique ID in the schema (Global Object Identification)
+  """
+  id: ID!
+}
