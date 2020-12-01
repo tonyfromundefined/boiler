@@ -4,7 +4,7 @@ import { graphql, QueryRenderer } from 'react-relay'
 
 import styled from '@emotion/styled'
 
-import { PageIndexQuery } from '../__generated__/PageIndexQuery.graphql'
+import { PageVersionQuery } from '../__generated__/PageVersionQuery.graphql'
 import {
   getEnvironment,
   getRelayServerSideProps,
@@ -12,9 +12,9 @@ import {
 } from '../relay'
 import Version from './Version'
 
-const PageIndex: NextPageRelay = ({ relaySource }) => {
+const PageVersion: NextPageRelay = ({ relaySource }) => {
   return (
-    <QueryRenderer<PageIndexQuery>
+    <QueryRenderer<PageVersionQuery>
       environment={getEnvironment(relaySource)}
       query={query}
       variables={{}}
@@ -25,9 +25,8 @@ const PageIndex: NextPageRelay = ({ relaySource }) => {
         }
         return (
           <Container>
-            <Title>Hello, Undefined!</Title>
-            <div>ping: {String(props.ping)}</div>
-            <Link href="/version">Show Version</Link>
+            <Version query={props} />
+            <Link href="/">Back to Home</Link>
           </Container>
         )
       }}
@@ -36,12 +35,12 @@ const PageIndex: NextPageRelay = ({ relaySource }) => {
 }
 
 const query = graphql`
-  query PageIndexQuery {
-    ping
+  query PageVersionQuery {
+    ...Version_query
   }
 `
 
-export const getServerSideProps = getRelayServerSideProps<PageIndexQuery>({
+export const getServerSideProps = getRelayServerSideProps<PageVersionQuery>({
   query,
 })
 
@@ -49,4 +48,4 @@ const Container = styled.div``
 
 const Title = styled.h1``
 
-export default PageIndex
+export default PageVersion

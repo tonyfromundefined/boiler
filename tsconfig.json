@@ -3,7 +3,9 @@
     "incremental": true,
     "target": "esnext",
     "module": "commonjs",
-    "lib": [],
+    "lib": [
+      "dom",
+    ],
     "jsx": "preserve",
     "outDir": "./build",
     "rootDir": "./",

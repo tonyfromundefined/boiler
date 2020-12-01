@@ -53,6 +53,8 @@ export type Query = {
   articles: ArticleConnection;
   /** Get object by ID (Global Object Identification) */
   node?: Maybe<Node>;
+  /** Returns true */
+  ping: Scalars['Boolean'];
   /** Returns commit hash */
   version: Scalars['String'];
 };
@@ -179,13 +181,13 @@ export type ResolversTypes = {
   ArticleEdge: ResolverTypeWrapper<Omit<ArticleEdge, 'node'> & { node: ResolversTypes['Article'] }>;
   Query: ResolverTypeWrapper<{}>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
+  Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   ArticlesWhereInput: ArticlesWhereInput;
   Node: ResolversTypes['Article'];
   DateTime: ResolverTypeWrapper<Scalars['DateTime']>;
   Date: ResolverTypeWrapper<Scalars['Date']>;
   Time: ResolverTypeWrapper<Scalars['Time']>;
   PageInfo: ResolverTypeWrapper<PageInfo>;
-  Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -197,13 +199,13 @@ export type ResolversParentTypes = {
   ArticleEdge: Omit<ArticleEdge, 'node'> & { node: ResolversParentTypes['Article'] };
   Query: {};
   Int: Scalars['Int'];
+  Boolean: Scalars['Boolean'];
   ArticlesWhereInput: ArticlesWhereInput;
   Node: ResolversParentTypes['Article'];
   DateTime: Scalars['DateTime'];
   Date: Scalars['Date'];
   Time: Scalars['Time'];
   PageInfo: PageInfo;
-  Boolean: Scalars['Boolean'];
 };
 
 export type ArticleResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['Article'] = ResolversParentTypes['Article']> = {
@@ -229,6 +231,7 @@ export type ArticleEdgeResolvers<ContextType = MyContext, ParentType extends Res
 export type QueryResolvers<ContextType = MyContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   articles?: Resolver<ResolversTypes['ArticleConnection'], ParentType, ContextType, RequireFields<QueryArticlesArgs, 'first'>>;
   node?: Resolver<Maybe<ResolversTypes['Node']>, ParentType, ContextType, RequireFields<QueryNodeArgs, 'id'>>;
+  ping?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   version?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 };
 

@@ -3,11 +3,9 @@
 // @ts-nocheck
 
 import { ConcreteRequest } from "relay-runtime";
-import { FragmentRefs } from "relay-runtime";
 export type PageIndexQueryVariables = {};
 export type PageIndexQueryResponse = {
-    readonly version: string;
-    readonly " $fragmentRefs": FragmentRefs<"Version_query">;
+    readonly ping: boolean;
 };
 export type PageIndexQuery = {
     readonly response: PageIndexQueryResponse;
@@ -18,37 +16,27 @@ export type PageIndexQuery = {
 
 /*
 query PageIndexQuery {
-  version
-  ...Version_query
-}
-
-fragment Version_query on Query {
-  version
+  ping
 }
 */
 
 const node: ConcreteRequest = (function(){
-var v0 = {
-  "alias": null,
-  "args": null,
-  "kind": "ScalarField",
-  "name": "version",
-  "storageKey": null
-};
+var v0 = [
+  {
+    "alias": null,
+    "args": null,
+    "kind": "ScalarField",
+    "name": "ping",
+    "storageKey": null
+  }
+];
 return {
   "fragment": {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
     "name": "PageIndexQuery",
-    "selections": [
-      (v0/*: any*/),
-      {
-        "args": null,
-        "kind": "FragmentSpread",
-        "name": "Version_query"
-      }
-    ],
+    "selections": (v0/*: any*/),
     "type": "Query",
     "abstractKey": null
   },
@@ -57,19 +45,17 @@ return {
     "argumentDefinitions": [],
     "kind": "Operation",
     "name": "PageIndexQuery",
-    "selections": [
-      (v0/*: any*/)
-    ]
+    "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "715b0f65b2a121b630c3262c163ac05d",
+    "cacheID": "539dd68853d3ffd453df1fc6b1401fd2",
     "id": null,
     "metadata": {},
     "name": "PageIndexQuery",
     "operationKind": "query",
-    "text": "query PageIndexQuery {\n  version\n  ...Version_query\n}\n\nfragment Version_query on Query {\n  version\n}\n"
+    "text": "query PageIndexQuery {\n  ping\n}\n"
   }
 };
 })();
-(node as any).hash = '683e61ca82d9fd049b2d1bd223bd4125';
+(node as any).hash = '48526b8c0aef78afa0366c50eea4f7f9';
 export default node;
