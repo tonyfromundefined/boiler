@@ -1,4 +1,5 @@
 import { GetStaticPropsContext, NextPage } from 'next/types'
+import * as R from 'ramda'
 import { fetchQuery, GraphQLTaggedNode } from 'react-relay'
 
 import { getInitialEnvironment } from './environment'
@@ -12,17 +13,17 @@ export function getRelayServerSideProps<T extends { variables: any }>({
   query: GraphQLTaggedNode
   variables?: (ctx: GetStaticPropsContext) => T['variables']
 }) {
-  return async (ctx: GetStaticPropsContext) => {
-    const { environment, source } = getInitialEnvironment()
-
-    await fetchQuery(environment, query, variables?.(ctx) ?? {})
-
-    return {
+  return R.pipe(
+    (ctx: GetStaticPropsContext) => ({ ...getInitialEnvironment(), ctx }),
+    ({ environment, source, ctx }) =>
+      fetchQuery(environment, query, variables?.(ctx) ?? {}).then(() => source),
+    R.andThen((source) => source.toJSON()),
+    R.andThen((relaySource) => ({
       props: {
-        relaySource: source.toJSON(),
+        relaySource,
       },
-    }
-  }
+    }))
+  )
 }
 
 export { getEnvironment } from './environment'
