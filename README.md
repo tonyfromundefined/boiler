@@ -45,6 +45,9 @@ The Production-ready GraphQL boilerplate.
 # Run MongoDB instance by backgrond
 $ docker-compose up -d
 
+# Install dependencies
+$ yarn
+
 # Start development server
 $ yarn dev
 ```
