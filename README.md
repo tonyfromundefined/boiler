@@ -48,6 +48,9 @@ $ docker-compose up -d
 # Install dependencies
 $ yarn
 
+# Copy .env.example to .env
+$ cp .env.example .env
+
 # Start development server
 $ yarn dev
 ```
