@@ -2,6 +2,18 @@
 
 The Production-ready GraphQL boilerplate.
 
+## Pre-configured
+
+- Yarn 2
+- TypeScript
+- Webpack
+- Babel
+  - `@babel/preset-typescript`
+  - `@babel/preset-env` (Node.js 14)
+- GraphQL JIT Executor
+- Sentry Apollo Plugin
+- Winston Logger
+
 ## Pre-installed
 
 ### GraphQL
@@ -22,18 +34,6 @@ The Production-ready GraphQL boilerplate.
 - React.js
 - Relay
 
-## Pre-configured
-
-- Yarn 2
-- TypeScript
-- Webpack
-- Babel
-  - `@babel/preset-typescript`
-  - `@babel/preset-env` (Node.js 14)
-- GraphQL JIT Executor
-- Sentry Apollo Plugin
-- Winston Logger
-
 ## Pre-written
 
 - GraphQL Operation Executor
@@ -41,12 +41,39 @@ The Production-ready GraphQL boilerplate.
 
 ## Getting Started
 
-## Folder Structure
+```bash
+# Run MongoDB instance by backgrond
+$ docker-compose up -d
+
+# Start development server
+$ yarn dev
+```
 
 ## Development
 
+```bash
+# Generate TypeScript typing from GraphQL schema declaration
+$ yarn codegen
+
+# Generate relay artifacts
+$ yarn relay
+```
+
 ## Build
+
+```bash
+# Build server
+$ yarn build
+```
 
 ## Deployment
 
+Use docker. `Dockerfile` is already built-in
+
+## Folder Structure and Architecture Principles
+
+WIP
+
 ## To-do
+
+WIP
