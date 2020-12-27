@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { DocumentNode, graphql as execute, print } from 'graphql'
+import { graphql as execute } from 'graphql'
 
 import { createContextFactory } from './context'
 import { getSchema } from './schema'
@@ -13,13 +13,13 @@ export function executeOperation(
     query,
     variables,
   }: {
-    query: DocumentNode
+    query: string
     variables?: object
   }
 ) {
   return execute({
     schema: getSchema(),
-    source: print(query),
+    source: query,
     variableValues: variables,
     contextValue: createContext({ req, res }),
   })
