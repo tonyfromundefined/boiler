@@ -16,7 +16,6 @@
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
     "@graphql-tools/schema": "^7.1.2",
-    "@stitches/react": "^0.0.2",
     "agenda": "^3.1.0",
     "agendash": "^1.0.0",
     "apollo-server": "^2.19.0",

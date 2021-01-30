@@ -53,7 +53,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@graphql-codegen/typescript", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:1.19.0"],
             ["@graphql-codegen/typescript-resolvers", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:1.18.0"],
             ["@graphql-tools/schema", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:7.1.2"],
-            ["@stitches/react", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.0.2"],
             ["@types/agenda", "npm:2.0.9"],
             ["@types/body-parser", "npm:1.19.0"],
             ["@types/cookie-parser", "npm:1.4.2"],
@@ -4445,43 +4444,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@stitches/core", [
-        ["npm:0.0.2", {
-          "packageLocation": "./.yarn/cache/@stitches-core-npm-0.0.2-2570e56f14-1affccca2d.zip/node_modules/@stitches/core/",
-          "packageDependencies": [
-            ["@stitches/core", "npm:0.0.2"],
-            ["@types/node", "npm:13.13.40"],
-            ["tslib", "npm:1.14.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@stitches/react", [
-        ["npm:0.0.2", {
-          "packageLocation": "./.yarn/cache/@stitches-react-npm-0.0.2-dbaffc54a3-db646becfc.zip/node_modules/@stitches/react/",
-          "packageDependencies": [
-            ["@stitches/react", "npm:0.0.2"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.0.2", {
-          "packageLocation": "./.yarn/$$virtual/@stitches-react-virtual-3c2ddc6546/0/cache/@stitches-react-npm-0.0.2-dbaffc54a3-db646becfc.zip/node_modules/@stitches/react/",
-          "packageDependencies": [
-            ["@stitches/react", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.0.2"],
-            ["@stitches/core", "npm:0.0.2"],
-            ["@types/node", "npm:13.13.40"],
-            ["@types/react", "npm:17.0.0"],
-            ["@types/react-test-renderer", "npm:16.9.4"],
-            ["react", "npm:17.0.1"],
-            ["tslib", "npm:1.14.1"]
-          ],
-          "packagePeers": [
-            "@types/react",
-            "react"
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["@szmarczak/http-timer", [
         ["npm:1.1.2", {
           "packageLocation": "./.yarn/cache/@szmarczak-http-timer-npm-1.1.2-ea82ca2d55-a46ec85423.zip/node_modules/@szmarczak/http-timer/",
@@ -4998,13 +4960,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:13.13.40", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-13.13.40-1882731473-a0e9433459.zip/node_modules/@types/node/",
-          "packageDependencies": [
-            ["@types/node", "npm:13.13.40"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:14.14.10", {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.14.10-5b464ba9d4-b793aa15e8.zip/node_modules/@types/node/",
           "packageDependencies": [
@@ -5089,15 +5044,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react", [
-        ["npm:16.14.2", {
-          "packageLocation": "./.yarn/cache/@types-react-npm-16.14.2-8e7d53e3aa-41d227d4e9.zip/node_modules/@types/react/",
-          "packageDependencies": [
-            ["@types/react", "npm:16.14.2"],
-            ["@types/prop-types", "npm:15.7.3"],
-            ["csstype", "npm:3.0.5"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:17.0.0", {
           "packageLocation": "./.yarn/cache/@types-react-npm-17.0.0-d4f5adb6f0-dcef2034b8.zip/node_modules/@types/react/",
           "packageDependencies": [
@@ -5125,16 +5071,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-relay", "npm:7.0.17"],
             ["@types/react", "npm:17.0.0"],
             ["@types/relay-runtime", "npm:10.1.3"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/react-test-renderer", [
-        ["npm:16.9.4", {
-          "packageLocation": "./.yarn/cache/@types-react-test-renderer-npm-16.9.4-fea9933b6a-ce75c5e515.zip/node_modules/@types/react-test-renderer/",
-          "packageDependencies": [
-            ["@types/react-test-renderer", "npm:16.9.4"],
-            ["@types/react", "npm:16.14.2"]
           ],
           "linkType": "HARD",
         }]
@@ -7033,7 +6969,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@graphql-codegen/typescript", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:1.19.0"],
             ["@graphql-codegen/typescript-resolvers", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:1.18.0"],
             ["@graphql-tools/schema", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:7.1.2"],
-            ["@stitches/react", "virtual:94c097482eb202cbd720b43a6817294c9ab8f973f179a848d86bd0fa09795bad50696bcd15cd360705405d5bc0308557ecbbfe8af43a9347fe1e375869b90dbe#npm:0.0.2"],
             ["@types/agenda", "npm:2.0.9"],
             ["@types/body-parser", "npm:1.19.0"],
             ["@types/cookie-parser", "npm:1.4.2"],

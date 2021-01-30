@@ -2683,30 +2683,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stitches/core@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@stitches/core@npm:0.0.2"
-  dependencies:
-    "@types/node": ^13.11.1
-    tslib: ^1.11.1
-  checksum: 1affccca2db13aabe9c0d0e884dcd983ba73f839f5f0ff0bc0e847b21faa0e82d5a4a3d33dbeb58d1652ac66ca62a6193d9432cad552bbb85964fda551ec3bce
-  languageName: node
-  linkType: hard
-
-"@stitches/react@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@stitches/react@npm:0.0.2"
-  dependencies:
-    "@stitches/core": ^0.0.2
-    "@types/node": ^13.11.1
-    "@types/react-test-renderer": ^16.9.3
-    tslib: ^1.11.1
-  peerDependencies:
-    react: ^16.13.1
-  checksum: db646becfc9d15c1318008eada4cd0ecff3c802d34c799171f7b3af4ddd3829afa527d30a09dd5367cfa1942941bc5090363eef456f48ffb3ea3ed413c18c068
-  languageName: node
-  linkType: hard
-
 "@szmarczak/http-timer@npm:^1.1.2":
   version: 1.1.2
   resolution: "@szmarczak/http-timer@npm:1.1.2"
@@ -3183,13 +3159,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^13.11.1":
-  version: 13.13.40
-  resolution: "@types/node@npm:13.13.40"
-  checksum: a0e9433459390329a9f0756a5bbc1e3b4ca4bb5043df6acd68ff0ca3f177222182b7dcbd3b41536dde15a8c151c64b0758bd39b4a25bbb5dd324cd2ba822d256
-  languageName: node
-  linkType: hard
-
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.0
   resolution: "@types/normalize-package-data@npm:2.4.0"
@@ -3260,15 +3229,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-test-renderer@npm:^16.9.3":
-  version: 16.9.4
-  resolution: "@types/react-test-renderer@npm:16.9.4"
-  dependencies:
-    "@types/react": ^16
-  checksum: ce75c5e51594e673391cd8d37523e95e2735703ab54763ce17d8c6bbed19a9ab8f14d5f3c75f2b99762ac33d92dd5aa0087add8e209f678619fdfb307e226b8a
-  languageName: node
-  linkType: hard
-
 "@types/react-transition-group@npm:^2.0.8":
   version: 2.9.2
   resolution: "@types/react-transition-group@npm:2.9.2"
@@ -3285,16 +3245,6 @@ __metadata:
     "@types/prop-types": "*"
     csstype: ^3.0.2
   checksum: dcef2034b822a949c5528fa8fa3c64da654fdbb822bd8f0488c0084d84cadb8b90af68813a6c95153d4754079f50b1cab206552c7c20f6b67a26c3641383fe31
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^16":
-  version: 16.14.2
-  resolution: "@types/react@npm:16.14.2"
-  dependencies:
-    "@types/prop-types": "*"
-    csstype: ^3.0.2
-  checksum: 41d227d4e9a45b1ad6d80c9b0fe9af003d95d03a0f2f2495a537c36d69541439fcff67edcef241e88c8ab7257377dbe8737d013d3f9b9503b76174165083f7b6
   languageName: node
   linkType: hard
 
@@ -4762,7 +4712,6 @@ __metadata:
     "@graphql-codegen/typescript": ^1.19.0
     "@graphql-codegen/typescript-resolvers": ^1.18.0
     "@graphql-tools/schema": ^7.1.2
-    "@stitches/react": ^0.0.2
     "@types/agenda": ^2.0.9
     "@types/body-parser": ^1.19.0
     "@types/cookie-parser": ^1.4.2
@@ -15010,7 +14959,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.11.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
+"tslib@npm:^1.10.0, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: f44fe7f216946b17d3e3074df3746372703cf24e9127b4c045511456e8e4bf25515fb0a1bb3937676cc305651c5d4fcb6377b0588a4c6a957e748c4c28905d17
