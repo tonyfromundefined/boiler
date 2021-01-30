@@ -1,7 +1,7 @@
 import Agenda from 'agenda'
 import mongoose from 'mongoose'
 
-import logger from '@boiler/logger'
+import logger from '@internal/logger'
 
 let agenda: Agenda | null = null
 

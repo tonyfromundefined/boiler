@@ -1,7 +1,7 @@
 import { GraphQLSchema } from 'graphql'
 
-import logger from '@boiler/logger'
 import { makeExecutableSchema } from '@graphql-tools/schema'
+import logger from '@internal/logger'
 
 import typeDefs from '../__generated__/typeDefs'
 import { resolvers } from './resolvers'

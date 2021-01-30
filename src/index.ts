@@ -1,7 +1,7 @@
 import 'source-map-support/register'
 import 'dotenv/config'
 
-import logger from '@boiler/logger'
+import logger from '@internal/logger'
 
 import { startAgenda } from './agenda'
 import { createApp } from './app'

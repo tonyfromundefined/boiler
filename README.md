@@ -38,7 +38,7 @@ The Production-ready GraphQL boilerplate.
 ## Pre-written
 
 - GraphQL Operation Executor
-- GraphQL Connection Helper (`@boiler/graphql-connection-resolver`)
+- GraphQL Connection Helper (`@internal/graphql-connection-resolver`)
 
 ## Getting Started
 
@@ -135,7 +135,7 @@ The internal library should not import code from a folder other than `/lib`. Be 
 > For this, I have set up aliases in webpack and typescript. You can use the internal library like this:
 
 ```typescript
-import * as F from '@boiler/f'
+import * as F from '@internal/f'
 ```
 
 ### 3. `/constants`

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import { MONGO_ENDPOINT, STAGE } from '~/constants'
 
-import logger from '@boiler/logger'
+import logger from '@internal/logger'
 
 export async function createConnection() {
   switch (STAGE) {

@@ -1,7 +1,7 @@
 import { ApolloServer } from 'apollo-server-express'
 import { STAGE } from '~/constants'
 
-import { executor } from '@boiler/apollo-jit-executor'
+import { executor } from '@internal/apollo-jit-executor'
 
 import { createContextFactory } from './context'
 import { getSchema } from './schema'

@@ -1,7 +1,7 @@
 import { Article } from '~/models'
 
-import { compactMap } from '@boiler/f'
-import { connection } from '@boiler/graphql-connection-resolver'
+import { compactMap } from '@internal/f'
+import { connection } from '@internal/graphql-connection-resolver'
 
 import { Resolvers } from '../../__generated__/codegen'
 

@@ -2,7 +2,7 @@ import { Router } from 'express'
 import R from 'ramda'
 import { executeOperation } from '~/graphql'
 
-import gql from '@boiler/plain-graphql-tag'
+import gql from '@internal/plain-graphql-tag'
 
 const ping = Router()
 

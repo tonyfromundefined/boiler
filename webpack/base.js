@@ -45,7 +45,7 @@ module.exports = {
     extensions: ['.js', '.mjs', '.ts'],
     alias: {
       '~': path.resolve('./src'),
-      '@boiler': path.resolve('./src/lib'),
+      '@internal': path.resolve('./src/lib'),
     },
   },
   resolveLoader: {
