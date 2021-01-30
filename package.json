@@ -46,7 +46,6 @@
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "react-relay": "^10.1.0",
-    "regenerator-runtime": "^0.13.7",
     "relay-runtime": "^10.1.0",
     "source-map-support": "^0.5.19",
     "winston": "^3.3.3"
@@ -60,7 +59,6 @@
     "@emotion/babel-plugin": "^11.0.0",
     "@graphql-codegen/add": "^2.0.2",
     "@graphql-codegen/cli": "^1.19.4",
-    "@graphql-codegen/introspection": "^1.18.1",
     "@graphql-codegen/schema-ast": "^1.18.1",
     "@graphql-codegen/typescript": "^1.19.0",
     "@graphql-codegen/typescript-resolvers": "^1.18.0",
@@ -93,6 +91,7 @@
     "pnp-webpack-plugin": "^1.6.4",
     "prettier": "^2.2.1",
     "raw-loader": "^4.0.2",
+    "regenerator-runtime": "^0.13.7",
     "relay-compiler": "^10.1.0",
     "relay-compiler-language-typescript": "^13.0.2",
     "rimraf": "^3.0.2",
@@ -102,10 +101,5 @@
     "webpack": "^5.9.0",
     "webpack-cli": "^4.2.0",
     "webpack-pnp-externals": "^1.1.0"
-  },
-  "dependenciesMeta": {
-    "webpack-cli@4.2.0": {
-      "unplugged": true
-    }
   }
 }

@@ -1785,18 +1785,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/introspection@npm:^1.18.1":
-  version: 1.18.1
-  resolution: "@graphql-codegen/introspection@npm:1.18.1"
-  dependencies:
-    "@graphql-codegen/plugin-helpers": ^1.18.2
-    tslib: ~2.0.1
-  peerDependencies:
-    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
-  checksum: c81313e690e2570512daa88ee21bda4a50850d0af7b24c6c9784d7e2c876d7d1ce8676902cc7a40c2615d552bc92a849e3417a7d41a7b23485afe81ce015742e
-  languageName: node
-  linkType: hard
-
 "@graphql-codegen/plugin-helpers@npm:^1.18.2":
   version: 1.18.2
   resolution: "@graphql-codegen/plugin-helpers@npm:1.18.2"
@@ -4707,7 +4695,6 @@ __metadata:
     "@emotion/styled": ^11.0.0
     "@graphql-codegen/add": ^2.0.2
     "@graphql-codegen/cli": ^1.19.4
-    "@graphql-codegen/introspection": ^1.18.1
     "@graphql-codegen/schema-ast": ^1.18.1
     "@graphql-codegen/typescript": ^1.19.0
     "@graphql-codegen/typescript-resolvers": ^1.18.0
@@ -4784,9 +4771,6 @@ __metadata:
     webpack-cli: ^4.2.0
     webpack-pnp-externals: ^1.1.0
     winston: ^3.3.3
-  dependenciesMeta:
-    webpack-cli@4.2.0:
-      unplugged: true
   languageName: unknown
   linkType: soft
 
