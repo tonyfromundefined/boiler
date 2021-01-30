@@ -13,6 +13,7 @@ The Production-ready GraphQL boilerplate.
 - GraphQL JIT Executor
 - Sentry Apollo Plugin
 - Winston Logger
+- Node Hot Loader
 
 ## Pre-installed
 
