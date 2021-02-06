@@ -22,3 +22,8 @@ export async function startAgenda() {
   await getAgenda().start()
   logger.info('Agenda is started')
 }
+
+export async function stopAgenda() {
+  await getAgenda().stop()
+  logger.info('Agenda is stopped')
+}

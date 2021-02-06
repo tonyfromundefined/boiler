@@ -15,6 +15,6 @@ export function createApolloServer() {
     introspection: STAGE !== 'production',
     tracing: false,
     context: createContext,
-    executor,
+    ...(STAGE !== 'development' ? { executor } : null),
   })
 }

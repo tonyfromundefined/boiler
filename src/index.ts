@@ -3,7 +3,7 @@ import 'dotenv/config'
 
 import logger from '@internal/logger'
 
-import { startAgenda } from './agenda'
+import { startAgenda, stopAgenda } from './agenda'
 import { createApp } from './app'
 import { createClient } from './client'
 import { STAGE } from './constants'
@@ -21,9 +21,10 @@ const PORT = 3000
     createConnection().then(() => startAgenda()),
   ])
 
-  let currentApp = await createApp({ render })
+  let _currentApp = await createApp({ render })
+  let _stopCurrentAgenda = stopAgenda
 
-  const httpServer = currentApp.listen(PORT, () => {
+  const httpServer = _currentApp.listen(PORT, () => {
     logger.info(`Server is running on http://localhost:${PORT}`)
   })
 
@@ -32,10 +33,17 @@ const PORT = 3000
       const { createApp } = await import('./app')
       const app = await createApp({ render })
 
-      httpServer.removeListener('request', currentApp)
+      httpServer.removeListener('request', _currentApp)
       httpServer.addListener('request', app)
 
-      currentApp = app
+      _currentApp = app
+    })
+    module.hot.accept('./agenda', async () => {
+      const { startAgenda, stopAgenda } = await import('./agenda')
+      await _stopCurrentAgenda()
+      await startAgenda()
+
+      _stopCurrentAgenda = stopAgenda
     })
   }
 })()
