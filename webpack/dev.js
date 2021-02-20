@@ -12,8 +12,6 @@ module.exports = {
   },
   plugins: [
     ...base.plugins,
-    new NodeHotLoaderWebpackPlugin({
-      inMemory: true,
-    }),
+    new NodeHotLoaderWebpackPlugin(),
   ],
 }
