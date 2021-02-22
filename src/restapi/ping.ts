@@ -2,15 +2,13 @@ import { Router } from 'express'
 import R from 'ramda'
 import { executeOperation } from '~/graphql'
 
-import gql from '@internal/plain-graphql-tag'
-
 const ping = Router()
 
 ping.get('/', (req, res) => {
   R.pipe(
     () =>
       executeOperation(req, res, {
-        query: gql`
+        query: /* GraphQL */ `
           query Ping {
             ping
           }
