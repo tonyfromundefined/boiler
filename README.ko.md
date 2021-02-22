@@ -35,7 +35,7 @@
 - React.js
 - Relay
 
-## 미리 잓ㅇ됨
+## 미리 작성됨
 
 - GraphQL Operation Executor
 - GraphQL Connection Helper (`@internal/graphql-connection-resolver`)
