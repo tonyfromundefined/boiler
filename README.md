@@ -2,6 +2,10 @@
 
 The Production-ready GraphQL boilerplate.
 
+## Translations
+
+- [한국어](./README.ko.md)
+
 ## Pre-configured
 
 - Yarn 2
