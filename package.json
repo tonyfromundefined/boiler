@@ -11,6 +11,11 @@
     "start": "NODE_ENV=production node ./build/index.js",
     "test": "dotenv -e .env -- jest --maxWorkers=8"
   },
+  "resolutions": {
+    "agenda": "3.1.0",
+    "mongodb": "3.6.4",
+    "mongoose": "5.10.2"
+  },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "@emotion/react": "^11.1.1",

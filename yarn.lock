@@ -3084,7 +3084,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
+"@types/mongodb@npm:*":
   version: 3.5.34
   resolution: "@types/mongodb@npm:3.5.34"
   dependencies:
@@ -3634,21 +3634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agenda@npm:^2.0.0":
-  version: 2.3.0
-  resolution: "agenda@npm:2.3.0"
-  dependencies:
-    cron: ~1.7.2
-    date.js: ~0.3.3
-    debug: ~4.1.1
-    human-interval: ~1.0.0
-    moment-timezone: ~0.5.27
-    mongodb: ~3.4.0
-  checksum: d95dd71d4cb9f0581bf65b16b498cdfd462fc8e701c6da26feeb700ef92990dfb8f636b19d255c9fbf3f0cab6d52ab1dbb1d5d0f702ff5e0cb178f8edd236be3
-  languageName: node
-  linkType: hard
-
-"agenda@npm:^3.1.0":
+"agenda@npm:3.1.0":
   version: 3.1.0
   resolution: "agenda@npm:3.1.0"
   dependencies:
@@ -4613,7 +4599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bl@npm:^2.2.0, bl@npm:^2.2.1":
+"bl@npm:^2.2.1":
   version: 2.2.1
   resolution: "bl@npm:2.2.1"
   dependencies:
@@ -4978,7 +4964,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bson@npm:^1.1.1, bson@npm:^1.1.4":
+"bson@npm:^1.1.4":
   version: 1.1.5
   resolution: "bson@npm:1.1.5"
   checksum: d1e6fe96baac02dacc54cc33f8accce7bd289a22f0e98804e76adbb9af463ee414f6c8aed15fa18c133330fe859a7bb750e432f39549bd823bc73c5e6dc8e1e4
@@ -5949,15 +5935,6 @@ __metadata:
     safe-buffer: ^5.0.1
     sha.js: ^2.4.8
   checksum: 98957676a93081678a2a915ae14898d65aac9b5651ffa55b8888484dd9d79c06d3cb3f85b137cd833ab536d87adee17394bb2b0efc591ea0e34110266d5bcd75
-  languageName: node
-  linkType: hard
-
-"cron@npm:~1.7.2":
-  version: 1.7.2
-  resolution: "cron@npm:1.7.2"
-  dependencies:
-    moment-timezone: ^0.5.x
-  checksum: 99e1343f5117f62dab6204d54a720943c97db187eb2d0c54d582ca829ac963f714fc1bd7cd9ac8139e7fc2a6bd9389020c9dc1cd6c60e8d5e460451b846f5391
   languageName: node
   linkType: hard
 
@@ -10984,43 +10961,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongodb@npm:3.5.10":
-  version: 3.5.10
-  resolution: "mongodb@npm:3.5.10"
-  dependencies:
-    bl: ^2.2.0
-    bson: ^1.1.4
-    denque: ^1.4.1
-    require_optional: ^1.0.1
-    safe-buffer: ^5.1.2
-    saslprep: ^1.0.0
-  dependenciesMeta:
-    saslprep:
-      optional: true
-  checksum: f13f4c434510363b347f502cfb06e7334aae532a56e79411dfc480b38eec14fbfd7d9e7e40b0fe98beff285f09d08ac1f8134df5be881fbb9e2b5eebb5ccb2f4
-  languageName: node
-  linkType: hard
-
-"mongodb@npm:3.6.2":
-  version: 3.6.2
-  resolution: "mongodb@npm:3.6.2"
-  dependencies:
-    bl: ^2.2.1
-    bson: ^1.1.4
-    denque: ^1.4.1
-    require_optional: ^1.0.1
-    safe-buffer: ^5.1.2
-    saslprep: ^1.0.0
-  dependenciesMeta:
-    saslprep:
-      optional: true
-  checksum: 4cec5667142ec2df76497b670c2dd4e2a6314e69c7d619898b48d96d6c7c2f7ae4d7a09ca5b2b0457e00160bb6e370c001e3e330836fe17e0633a736e3409f89
-  languageName: node
-  linkType: hard
-
-"mongodb@npm:3.6.3":
-  version: 3.6.3
-  resolution: "mongodb@npm:3.6.3"
+"mongodb@npm:3.6.4":
+  version: 3.6.4
+  resolution: "mongodb@npm:3.6.4"
   dependencies:
     bl: ^2.2.1
     bson: ^1.1.4
@@ -11044,39 +10987,7 @@ fsevents@~2.1.2:
       optional: true
     snappy:
       optional: true
-  checksum: 85a80641803e75b93e76bb9e84c26429ec2c374e7138114562a25a6272880d1c18cf5dda21b8bd75c7dd110dac997d11572bb2da506c12c99c9faa4c668364c7
-  languageName: node
-  linkType: hard
-
-"mongodb@npm:~3.4.0":
-  version: 3.4.1
-  resolution: "mongodb@npm:3.4.1"
-  dependencies:
-    bson: ^1.1.1
-    require_optional: ^1.0.1
-    safe-buffer: ^5.1.2
-    saslprep: ^1.0.0
-  dependenciesMeta:
-    saslprep:
-      optional: true
-  checksum: 66a56d81ed6420d90007ff8b87373c47bee8da8728c010abd1fb0708906f0d86014b2f0922f7c0662bf20c416a0cdb9349086ae0755eb6cf5abebda8211a37cf
-  languageName: node
-  linkType: hard
-
-"mongodb@npm:~3.5.0":
-  version: 3.5.11
-  resolution: "mongodb@npm:3.5.11"
-  dependencies:
-    bl: ^2.2.1
-    bson: ^1.1.4
-    denque: ^1.4.1
-    require_optional: ^1.0.1
-    safe-buffer: ^5.1.2
-    saslprep: ^1.0.0
-  dependenciesMeta:
-    saslprep:
-      optional: true
-  checksum: aa0ed1f92bb378b6cfa3c570abc3d12399b4d32852c7e86c325b041699a376cfb8fe4b910bb4c80e8415818ee5422485271c442b577e34ddf54b888f97453bdb
+  checksum: f2331e7cdce7694b033346f898af9429bab53505ffc1175cb66e370eecc26eb3ae08d950f57ee6ca0be1a4d24f735c40ac758f3e8f0f68826b43e7a36ed5f5bf
   languageName: node
   linkType: hard
 
@@ -11107,33 +11018,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.0, mongoose@npm:^5.6.4":
-  version: 5.11.0
-  resolution: "mongoose@npm:5.11.0"
-  dependencies:
-    "@types/mongodb": ^3.5.27
-    bson: ^1.1.4
-    kareem: 2.3.1
-    mongodb: 3.6.3
-    mongoose-legacy-pluralize: 1.0.2
-    mpath: 0.8.0
-    mquery: 3.2.2
-    ms: 2.1.2
-    regexp-clone: 1.0.0
-    safe-buffer: 5.2.1
-    sift: 7.0.1
-    sliced: 1.0.1
-  checksum: a2d2f7f889b72dcee9e98eb72c251859cb7c0ed7a5e3b6ed01e088a130074c7f9560abefd571bc2407908c50cfe1e514d8c0f0d06a9f4589c0eb19af0b23d9e5
-  languageName: node
-  linkType: hard
-
-"mongoose@npm:5.9.27":
-  version: 5.9.27
-  resolution: "mongoose@npm:5.9.27"
+"mongoose@npm:5.10.2":
+  version: 5.10.2
+  resolution: "mongoose@npm:5.10.2"
   dependencies:
     bson: ^1.1.4
     kareem: 2.3.1
-    mongodb: 3.5.10
+    mongodb: 3.6.0
     mongoose-legacy-pluralize: 1.0.2
     mpath: 0.7.0
     mquery: 3.2.2
@@ -11142,7 +11033,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 27c0c052c2841fbf780855668fa941321d1cf197d72d819ef64fdfb8446ff13641adcee9809e1be766d45655f4aae0788ff3dcc96846a5236440d0339b975fa4
+  checksum: 326863f31629bfbfffc3e4e4154047ce58f07e7867a563308d1cd0b80b8951223e12f89e0c13151047c777b603e385ff5fde6a31acc81f6aea260a1fef7045d1
   languageName: node
   linkType: hard
 
@@ -11164,13 +11055,6 @@ fsevents@~2.1.2:
   version: 0.7.0
   resolution: "mpath@npm:0.7.0"
   checksum: 76e271ff01a637452b1b8bb36825e74020e23d6fa1792455dc2992931b3fdfffcd637dcbe4c02a6bbb9e264f3920be4c5dcf42041f37176b00d5c8175604c4c1
-  languageName: node
-  linkType: hard
-
-"mpath@npm:0.8.0":
-  version: 0.8.0
-  resolution: "mpath@npm:0.8.0"
-  checksum: 42d11142b18ee16499f9c86f7fa3540bb10ee2f237de47a3b26e2a60c7fa68094ac6be0dd148a8111e61ffde2368fcc91040257b13d1c832e13e4f932b83094f
   languageName: node
   linkType: hard
 
